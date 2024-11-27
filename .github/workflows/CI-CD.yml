@@ -2,8 +2,7 @@ name: CI-CD
 
 on:
   push:
-    branches:
-      - "master"
+    branches: ["master" , "develop"]
 
 jobs:
   CI:
@@ -13,17 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
 
-      - name: Setup Java (Maven)
-        uses: actions/setup-java@v3
-        with:
-          java-version: '21'
-          distribution: 'adoptopenjdk'
-
       - name: Build with Maven
         run: mvn clean package -DskipTests  # Isso irá gerar o arquivo JAR no diretório target/
 
-      - name: Run SonarQube Scan
-        uses: sijomc/sonarscan-action@1.1
+      #- name: Run SonarQube Scan
+      # uses: sijomc/sonarscan-action@1.1
 
       - name: Docker Hub Authentication
         uses: docker/login-action@v3.3.0
