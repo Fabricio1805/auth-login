@@ -1,5 +1,5 @@
 # Usando uma imagem base do OpenJDK
-FROM openjdk:21.0.5-jdk-slim AS builder
+FROM openjdk:21-jdk-slim AS builder
 
 # Definir o diretório de trabalho dentro do container
 WORKDIR /app
