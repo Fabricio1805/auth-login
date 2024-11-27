@@ -27,9 +27,9 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           push: true
-          tags:
-            Fabricio1805/auth-login:${{github.run_number}}
-            Fabricio1805/auth-login:latest
+          tags: |
+            - Fabricio1805/auth-login:${{github.run_number}}
+            - Fabricio1805/auth-login:latest
           
 
   
