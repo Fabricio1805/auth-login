@@ -1,5 +1,5 @@
 # Usando uma imagem base do OpenJDK
-FROM openjdk:21-jdk-alpine
+FROM openjdk:8-jdk-alpine
 
 WORKDIR "/home"
 
