@@ -28,8 +28,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            - Fabricio1805/auth-login:${{github.run_number}}
-            - Fabricio1805/auth-login:latest
+            fabricio1905/auth-login:${{github.run_number}}
+            fabricio1905/auth-login:latest
           
 
   
