@@ -1,15 +1,14 @@
-FROM openjdk:21.0.5-jdk-alpine
+# Usando uma imagem base do OpenJDK
+FROM openjdk:21.0.5-jdk-slim AS builder
 
-WORKDIR "/home"
+# Definir o diretório de trabalho dentro do container
+WORKDIR /app
 
-COPY . .
+# Copiar o arquivo JAR gerado para o contêiner
+COPY target/*.jar app.jar
 
-RUN apk add maven
-
-WORKDIR "/home/auth-login"
-
-RUN mvn clean package
-
+# Expor a porta que a aplicação vai rodar (por padrão, o Spring Boot usa a porta 8080)
 EXPOSE 8080
 
-CMD [ "java", "-jar",  "/home/auth-login/target/auth-login-0.0.1-SNAPSHOT.jar"]
+# Comando para rodar a aplicação Spring Boot
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
