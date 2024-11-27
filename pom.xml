@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.auth-login</groupId>
 	<artifactId>auth-login</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>auth-login</name>
 	<description>project auth-login for Spring Boot</description>
 	<url/>
