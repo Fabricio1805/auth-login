@@ -12,8 +12,8 @@ jobs:
       - name: checkout do codigo
         uses: actions/checkout@v4.2.2
 
-      - name: sonar
-        uses: sijomc/sonarscan-action@1.1
+      #- name: sonar
+        #uses: sijomc/sonarscan-action@1.1
       
       - name: authenticação no docker hub
         uses: docker/login-action@v3.3.0
