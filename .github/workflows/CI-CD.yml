@@ -2,7 +2,7 @@ name: auth-login
 
 on:
     push:
-        branches: [master, develop]
+        branches: [master, develop, qa]
 
 jobs:
     build:
@@ -24,7 +24,7 @@ jobs:
               run: docker build -t fabricio1905/auth-login:${{ github.run_number }} .
             - name: Push image docker
               run: docker push fabricio1905/auth-login:${{ github.run_number }}
-              
+
     #deploy:
     #    needs: build
     #    runs-on: self-hosted
