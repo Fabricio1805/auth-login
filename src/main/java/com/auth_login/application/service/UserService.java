@@ -2,8 +2,8 @@ package com.auth_login.application.service;
 
 import org.springframework.data.domain.Pageable;
 
-import com.auth_login.application.dto.ListAllUserResponseDTO;
-import com.auth_login.application.dto.UserReponseDTO;
+import com.auth_login.application.dto.user.ListAllUserResponseDTO;
+import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.domain.entities.user.User;
 
 public interface UserService {

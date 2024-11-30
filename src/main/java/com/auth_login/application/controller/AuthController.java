@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.auth_login.application.dto.AuthResponseDTO;
-import com.auth_login.application.dto.LoginRequestDTO;
-import com.auth_login.application.dto.RegisterRequestDTO;
-import com.auth_login.application.dto.UserReponseDTO;
+import com.auth_login.application.dto.user.AuthResponseDTO;
+import com.auth_login.application.dto.user.LoginRequestDTO;
+import com.auth_login.application.dto.user.RegisterRequestDTO;
+import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.application.service.AuthService;
 
 

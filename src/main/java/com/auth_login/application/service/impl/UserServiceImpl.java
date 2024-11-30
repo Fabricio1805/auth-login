@@ -6,9 +6,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.auth_login.application.dto.ListAllUserResponseDTO;
 import com.auth_login.application.dto.PageableDTO;
-import com.auth_login.application.dto.UserReponseDTO;
+import com.auth_login.application.dto.user.ListAllUserResponseDTO;
+import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.application.repository.UserRepository;
 import com.auth_login.application.service.UserService;
 import com.auth_login.application.service.mapper.UserMapper;

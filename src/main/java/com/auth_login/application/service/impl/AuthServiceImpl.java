@@ -6,10 +6,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.auth_login.application.dto.AuthResponseDTO;
-import com.auth_login.application.dto.LoginRequestDTO;
-import com.auth_login.application.dto.RegisterRequestDTO;
-import com.auth_login.application.dto.UserReponseDTO;
+import com.auth_login.application.dto.user.AuthResponseDTO;
+import com.auth_login.application.dto.user.LoginRequestDTO;
+import com.auth_login.application.dto.user.RegisterRequestDTO;
+import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.application.repository.UserRepository;
 import com.auth_login.application.service.AuthService;
 import com.auth_login.application.service.mapper.UserMapper;

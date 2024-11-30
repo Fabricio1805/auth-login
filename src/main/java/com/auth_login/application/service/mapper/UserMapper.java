@@ -3,7 +3,7 @@ package com.auth_login.application.service.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-import com.auth_login.application.dto.UserReponseDTO;
+import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.domain.entities.user.User;
 
 @Mapper(componentModel = "spring")
