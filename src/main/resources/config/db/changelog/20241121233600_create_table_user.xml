@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <changeSet id="20241121233600" author="fabricio">
-        <createTable tableName="user">
+        <createTable tableName="app_user">
             <column name="id" autoIncrement="true" type="bigint">
                 <constraints primaryKey="true" nullable="false" />
             </column>
@@ -15,15 +15,15 @@
              <constraints nullable="false" />
             </column>
 
-            <column name="email" type="varchar(100)">
+            <column name="email" type="varchar(100)" remarks="email do usuário">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="password" type="varchar(150)">
                 <constraints nullable="false" />
             </column>
 
-            <column name="password" type="varchar(50)">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+            <column name="status" type="boolean" defaultValueBoolean="true">
                 <constraints nullable="false" />
             </column>
 
