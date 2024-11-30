@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auth_login.application.dto.user.ListAllUserResponseDTO;
+import com.auth_login.application.dto.user.UpdateUserRequestDTO;
 import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.application.service.UserService;
-import com.auth_login.domain.entities.user.User;
 
 
 @RestController
@@ -41,14 +41,14 @@ public class UserController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity updateUser(@PathVariable final Long id, @RequestBody final User user) {
+    public ResponseEntity updateUser(@PathVariable final Long id, @RequestBody final UpdateUserRequestDTO user) {
         userService.updateUser(id, user);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/status/{id}/{status}")
     public ResponseEntity updateUser(@PathVariable final Long id, @PathVariable final boolean status) {
         userService.updateStatusById(id, status);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 }

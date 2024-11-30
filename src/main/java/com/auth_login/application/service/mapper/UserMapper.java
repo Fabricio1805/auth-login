@@ -3,6 +3,7 @@ package com.auth_login.application.service.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import com.auth_login.application.dto.user.UpdateUserRequestDTO;
 import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.domain.entities.user.User;
 
@@ -13,4 +14,5 @@ public interface UserMapper {
 
     User toEntity(UserReponseDTO dto);
     UserReponseDTO toDto(User user);
+    User toEntityUpdate(UpdateUserRequestDTO dto);
 }

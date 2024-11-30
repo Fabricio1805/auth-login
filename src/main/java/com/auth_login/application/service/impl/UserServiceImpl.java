@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.auth_login.application.dto.PageableDTO;
 import com.auth_login.application.dto.user.ListAllUserResponseDTO;
+import com.auth_login.application.dto.user.UpdateUserRequestDTO;
 import com.auth_login.application.dto.user.UserReponseDTO;
 import com.auth_login.application.repository.UserRepository;
 import com.auth_login.application.service.UserService;
@@ -52,10 +53,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(Long id, User user) {
-        userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("User not found"));
-        userRepository.save(user);
+    public void updateUser(Long id, UpdateUserRequestDTO userUpdate) {
+       User user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("User not found"));
+        user.setName(userUpdate.name());
+        user.setStatus(userUpdate.status());
 
+        userRepository.save(user);
     }
 
     @Override

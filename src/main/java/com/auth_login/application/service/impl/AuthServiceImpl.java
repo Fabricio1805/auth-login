@@ -37,6 +37,10 @@ public class AuthServiceImpl implements AuthService {
     public AuthResponseDTO login(LoginRequestDTO loginRequestDTO) {
         User user = userRepository.findByEmail(loginRequestDTO.email()).orElseThrow(() -> new RuntimeException("User Not Found"));
 
+        if(user.isStatus() == false) {
+            throw new RuntimeException("alguma coisa");
+        }
+
         if(!passwordEncoder.matches(loginRequestDTO.password(), user.getPassword())) {
             throw new RuntimeException("alguma coisa");
         }
