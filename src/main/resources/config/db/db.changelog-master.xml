@@ -7,5 +7,5 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-    <include file="db/changelog/20241121233600_create_table_user.xml" />
+    <include file="config/db/changelog/20241121233600_create_table_user.xml" />
 </databaseChangeLog>
